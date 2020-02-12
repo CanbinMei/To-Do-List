@@ -1,0 +1,25 @@
+<%- include("header") -%>   <!-- include header.ejs -->
+
+<!-- To use variable, need to put the variable inside of <%= %> -->
+
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>  <!-- listTitle is a variable. -->
+  </div>
+  <div class="box">
+    <% for(var i =0; i < newListItems.length; i++) { %>
+    <div class="item">
+      <input type="checkbox">
+      <p> <%= newListItems[i] %></p>  <!-- newListItems is a variabe with type of array. -->
+    </div>
+    <% } %>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+
+      <!-- Save the value of "newItem", the destination depends on "listTitle". -->
+      <!-- The logic is from line 49 to 57 in app.js. -->
+      <button type="submit" name="list" value= <%= listTitle %>>+</button>
+
+    </form>
+  </div>
+
+<%- include("footer") -%>   <!-- include footer.ejs -->
