@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-// The server listen to port = 3000.
+// The server listen to port = 3000 and the port Heroku assigned.
 app.listen(process.env.PORT || port, function() {
   console.log("Server started on port 3000");
 })

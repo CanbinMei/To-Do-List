@@ -20,3 +20,4 @@ exports.getDay = function() {
   };
   return date.toLocaleDateString("en-US", options);
 }
+  
